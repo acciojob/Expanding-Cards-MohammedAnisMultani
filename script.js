@@ -1,11 +1,13 @@
-//your JS code here. If required.
-function expandCard(panelIndex) {
-    const panels = document.querySelectorAll('.panel');
-    panels.forEach((panel, index) => {
-      if (index + 1 === panelIndex) {
-        panel.classList.add('active');
-      } else {
-        panel.classList.remove('active');
-      }
-    });
-  }
+let panel = document.querySelectorAll(".panel")
+panel.forEach(panel=>{
+  panel.addEventListener("click",(e)=>{
+    removing();
+    panel.classList.add("active")
+  })
+})
+
+function removing(){
+  panel.forEach(panel=>{
+    panel.classList.remove("active");
+  })
+}
